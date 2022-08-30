@@ -1,0 +1,12 @@
+{
+    "name": "cahtel/src",
+    "authors": [
+        {
+            "name": "a.pupyishev",
+            "email": "a.pupyishev@robo.cash"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
