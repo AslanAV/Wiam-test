@@ -1,9 +1,14 @@
-FROM php:8.0-fpm
+FROM php:8.1-fpm
 RUN apt-get update && apt-get install -y \
 		libfreetype6-dev \
 		libjpeg62-turbo-dev \
 		libpng-dev \
 		iputils-ping \
+        libzip-dev \
+        libpq-dev \
+        zip \
+    && docker-php-ext-install mysqli pdo pdo_mysql \
+    && docker-php-ext-install zip pgsql pdo_pgsql \
 	&& docker-php-ext-configure gd --with-freetype --with-jpeg \
 	&& docker-php-ext-install -j$(nproc) gd
 
@@ -16,7 +21,7 @@ WORKDIR /var/www
 CMD ["php-fpm"]
 
 ARG WEB_USER_ID=1000
-ARG WEB_USER_NAME=cahtel
+ARG WEB_USER_NAME=aslan
 RUN useradd -m -u ${WEB_USER_ID} ${WEB_USER_NAME} || echo "Users exists"
 RUN sed -i -- "s/user = www-data/user = ${WEB_USER_NAME}/g" /usr/local/etc/php-fpm.d/www.conf
 USER ${WEB_USER_ID}
