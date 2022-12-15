@@ -1,3 +1,4 @@
 /src/vendor/
 .idea
 Docker/nginx/logs/
+src/web/images
