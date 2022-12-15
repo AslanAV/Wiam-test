@@ -1,3 +1,0 @@
-2022/12/15 15:07:52 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/nginx.conf:29
-2022/12/15 15:18:30 [error] 30#30: *3 directory index of "/var/www/" is forbidden, client: 172.27.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
-2022/12/15 15:18:37 [error] 30#30: *3 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 172.27.0.1, server: localhost, request: "GET /web/index.php HTTP/1.1", host: "localhost"
