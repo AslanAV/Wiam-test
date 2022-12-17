@@ -51,15 +51,40 @@ $this->params['breadcrumbs'][] = $this->title;
             </ul>
         </li>
     </ul>
-    <p>Setup and start project</p>
-    <pre><code class="lang-shell">./deploy.<span class="hljs-keyword">sh</span>
-</code></pre>
-    <p>Site</p>
-    <pre><code class="lang-shell"><span class="hljs-symbol">http:</span><span class="hljs-comment">//localhost/</span>
-</code></pre>
-</code></pre>
-    <p>Admin with token xyz123</p>
-    <pre><code class="lang-shell"><span class="hljs-symbol">http:</span><span class="hljs-comment">//localhost/web/index.php?r=site%2Fadmin&token=xyz123/</span>
-</code></pre>
-
+    <hr>
+    <div class="m-2">
+        <p>Setup and start project</p>
+        <code class="lang-shell">
+            ./deploy.<span class="hljs-keyword">sh</span>
+        </code>
+    </div>
+    <div class="m-3"></div>
+    <div class="m-2">
+        <p>add migration</p>
+        <code class="lang-shell">
+            <span class="hljs-attribute">make compose-bash</span>
+        </code>
+    </div>
+    <div class="m-3"></div>
+    <div class="m-2">
+        <p>in docker-container</p>
+        <code class="lang-shell">
+            ./yii migrate
+        </code>
+    </div>
+    <div class="m-3"></div>
+    <div class="m-2">
+        <p>Site</p>
+        <code class="lang-shell"><span class="hljs-symbol">
+             http:</span><span class="hljs-comment">//localhost/</span>
+        </code>
+    </div>
+    <div class="m-3"></div>
+    <div class="m-2">
+        <p>Admin with token=xyz123</p>
+        <code class="lang-shell">http:<span class="hljs-regexp">
+                //</span>localhost<span class="hljs-regexp">/web/i</span>ndex.php?r=site%<span class="hljs-number">2</span>Fadmin&amp;token=xyz123<span class="hljs-regexp">/</span>
+        </code>
+    </div>
+    <div class="m-3"></div>
 </div>

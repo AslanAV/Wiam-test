@@ -39,7 +39,22 @@ Setup and start project
 ./deploy.sh
 ```
 
+add migration
+```shell
+make compose-bash
+```
+
+in docker-container
+```shell
+./yii migrate
+```
+
 Site
 ```shell
 http://localhost/
+```
+
+Admin with token=xyz123
+```shell
+http://localhost/web/index.php?r=site%2Fadmin&token=xyz123/
 ```
