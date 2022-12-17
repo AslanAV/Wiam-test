@@ -12,7 +12,13 @@ class m221215_172256_pictures extends Migration
      */
     public function safeUp()
     {
-
+        $this->createTable('{{%pictures}}', [
+            'id' => $this->primaryKey(),
+            'picture_id' => $this->integer(),
+            'decision' => $this->string(),
+            'created_at' => $this->timestamp(),
+            'update_at' => $this->timestamp(),
+        ]);
     }
 
     /**
@@ -20,23 +26,6 @@ class m221215_172256_pictures extends Migration
      */
     public function safeDown()
     {
-        echo "m221215_172256_pictures cannot be reverted.\n";
-
-        return false;
+        $this->dropTable('{{%pictures}}');
     }
-
-    /*
-    // Use up()/down() to run migration code without a transaction.
-    public function up()
-    {
-
-    }
-
-    public function down()
-    {
-        echo "m221215_172256_pictures cannot be reverted.\n";
-
-        return false;
-    }
-    */
 }
